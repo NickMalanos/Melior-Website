@@ -132,14 +132,14 @@ main {
 .hero-entry {
   opacity: 0;
   transform: translateY(12px);
-  animation: heroFadeIn 1s ease-out forwards;
+  animation: heroFadeIn 0.8s ease-out forwards;
 }
 
-.hero-inner .hero-entry:nth-child(1) { animation-delay: 0.15s; }
-.hero-inner .hero-entry:nth-child(2) { animation-delay: 0.4s; }
-.hero-inner .hero-entry:nth-child(3) { animation-delay: 0.7s; }
-.hero-inner .hero-entry:nth-child(4) { animation-delay: 1s; }
-.hero-inner .hero-entry:nth-child(5) { animation-delay: 1.3s; }
+.hero-inner .hero-entry:nth-child(1) { animation-delay: 0.1s; }
+.hero-inner .hero-entry:nth-child(2) { animation-delay: 0.3s; }
+.hero-inner .hero-entry:nth-child(3) { animation-delay: 0.55s; }
+.hero-inner .hero-entry:nth-child(4) { animation-delay: 0.8s; }
+.hero-inner .hero-entry:nth-child(5) { animation-delay: 1.05s; }
 
 @keyframes heroFadeIn {
   to {
@@ -249,7 +249,7 @@ h1 {
   left: -120px;
   background: radial-gradient(circle, rgba(99, 140, 255, 0.15) 0%, transparent 70%);
   filter: blur(60px);
-  animation: orbFloat1 18s ease-in-out infinite;
+  animation: orbFloat1 14s ease-in-out infinite;
 }
 
 .shape-orb-2 {
@@ -259,7 +259,7 @@ h1 {
   right: -100px;
   background: radial-gradient(circle, rgba(140, 110, 255, 0.12) 0%, transparent 70%);
   filter: blur(50px);
-  animation: orbFloat2 22s ease-in-out infinite;
+  animation: orbFloat2 17s ease-in-out infinite;
 }
 
 .shape-orb-3 {
@@ -270,7 +270,7 @@ h1 {
   transform: translateX(-50%);
   background: radial-gradient(circle, rgba(100, 160, 255, 0.1) 0%, transparent 70%);
   filter: blur(40px);
-  animation: orbFloat3 26s ease-in-out infinite;
+  animation: orbFloat3 20s ease-in-out infinite;
 }
 
 .shape-ring {
@@ -281,7 +281,7 @@ h1 {
   transform: translate(-50%, -50%);
   border: 1px solid rgba(140, 170, 255, 0.05);
   background: none;
-  animation: ringRotate 80s linear infinite;
+  animation: ringRotate 60s linear infinite;
 }
 
 .shape-ring-2 {
@@ -292,7 +292,7 @@ h1 {
   transform: translate(-50%, -50%);
   border: 1px solid rgba(140, 170, 255, 0.03);
   background: none;
-  animation: ringRotateRev 100s linear infinite;
+  animation: ringRotateRev 75s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
