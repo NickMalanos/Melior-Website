@@ -29,27 +29,9 @@ export function HeroSection() {
     <section className="hero" id="top">
       <AnimatedShapes />
       <div className="container hero-inner">
-        <motion.p
-          className="eyebrow"
-          initial={reduceMotion ? undefined : { opacity: 0, y: 16 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          AI Automation Consulting
-        </motion.p>
-        <motion.h1
-          initial={reduceMotion ? undefined : { opacity: 0, y: 20 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          AI automation, built around how you work.
-        </motion.h1>
-        <motion.p
-          className="hero-subtitle"
-          initial={reduceMotion ? undefined : { opacity: 0, y: 20 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-        >
+        <p className="eyebrow hero-entry">AI Automation Consulting</p>
+        <h1 className="hero-entry">AI automation, built around how you work.</h1>
+        <p className="hero-subtitle hero-entry">
           Custom AI tools that automate your operations, replace your
           spreadsheets, and give you real-time visibility — for{" "}
           <span className="rotating-word-wrap">
@@ -66,18 +48,13 @@ export function HeroSection() {
               </motion.span>
             </AnimatePresence>
           </span>
-        </motion.p>
-        <motion.div
-          className="hero-actions"
-          initial={reduceMotion ? undefined : { opacity: 0, y: 20 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
+        </p>
+        <div className="hero-actions hero-entry">
           <CTAButton href="#contact">Book a Discovery Call</CTAButton>
           <CTAButton href="#what-we-do" secondary>
             See What We Do
           </CTAButton>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

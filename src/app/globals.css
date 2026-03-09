@@ -129,6 +129,28 @@ main {
   align-items: center;
 }
 
+.hero-entry {
+  opacity: 0;
+  animation: heroFadeIn 0.5s ease forwards;
+}
+
+.hero-inner .hero-entry:nth-child(1) { animation-delay: 0.05s; }
+.hero-inner .hero-entry:nth-child(2) { animation-delay: 0.15s; }
+.hero-inner .hero-entry:nth-child(3) { animation-delay: 0.25s; }
+.hero-inner .hero-entry:nth-child(4) { animation-delay: 0.4s; }
+.hero-inner .hero-entry:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes heroFadeIn {
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-entry {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 .hero .eyebrow {
   margin-bottom: 1.5rem;
   display: inline-block;
@@ -192,6 +214,29 @@ h1 {
   border-radius: 50%;
 }
 
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(15px, -30px) scale(1.08); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-20px, 20px) scale(0.92); }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(calc(-50% + 10px), -18px); }
+}
+
+@keyframes ringRotate {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes ringRotateRev {
+  to { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+
 .shape-orb-1 {
   width: 420px;
   height: 420px;
@@ -199,6 +244,7 @@ h1 {
   left: -120px;
   background: radial-gradient(circle, rgba(99, 140, 255, 0.15) 0%, transparent 70%);
   filter: blur(60px);
+  animation: orbFloat1 8s ease-in-out infinite;
 }
 
 .shape-orb-2 {
@@ -208,6 +254,7 @@ h1 {
   right: -100px;
   background: radial-gradient(circle, rgba(140, 110, 255, 0.12) 0%, transparent 70%);
   filter: blur(50px);
+  animation: orbFloat2 10s ease-in-out infinite;
 }
 
 .shape-orb-3 {
@@ -218,6 +265,7 @@ h1 {
   transform: translateX(-50%);
   background: radial-gradient(circle, rgba(100, 160, 255, 0.1) 0%, transparent 70%);
   filter: blur(40px);
+  animation: orbFloat3 12s ease-in-out infinite;
 }
 
 .shape-ring {
@@ -228,6 +276,7 @@ h1 {
   transform: translate(-50%, -50%);
   border: 1px solid rgba(140, 170, 255, 0.05);
   background: none;
+  animation: ringRotate 40s linear infinite;
 }
 
 .shape-ring-2 {
@@ -238,6 +287,17 @@ h1 {
   transform: translate(-50%, -50%);
   border: 1px solid rgba(140, 170, 255, 0.03);
   background: none;
+  animation: ringRotateRev 50s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape-orb-1,
+  .shape-orb-2,
+  .shape-orb-3,
+  .shape-ring,
+  .shape-ring-2 {
+    animation: none;
+  }
 }
 
 .shape-grid {
