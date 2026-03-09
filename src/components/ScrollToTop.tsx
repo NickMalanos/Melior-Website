@@ -4,7 +4,13 @@ import { useEffect } from "react";
 
 export function ScrollToTop() {
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    window.history.scrollRestoration = "manual";
     window.scrollTo(0, 0);
+    const raf = requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+    return () => cancelAnimationFrame(raf);
   }, []);
   return null;
 }

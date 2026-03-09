@@ -21,7 +21,14 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "typeof window!=='undefined'&&(window.history.scrollRestoration='manual',window.scrollTo(0,0));",
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
