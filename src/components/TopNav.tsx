@@ -25,7 +25,12 @@ export function TopNav() {
           <a href="#contact">Contact</a>
         </nav>
         <div className="top-cta">
-          <CTAButton href="#contact">Book a Call</CTAButton>
+          <CTAButton
+            href="https://calendly.com/meliorsolutions-info/30min"
+            newTab
+          >
+            Book a Call
+          </CTAButton>
         </div>
       </div>
     </header>

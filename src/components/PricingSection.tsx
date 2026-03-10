@@ -67,7 +67,9 @@ export function PricingSection() {
         </StaggerChildren>
         <FadeInOnView>
           <div className="pricing-cta">
-            <CTAButton href="#contact">Book a Discovery Call</CTAButton>
+            <CTAButton href="#calendly" glow glowVariant="navy">
+              Book a Discovery Call
+            </CTAButton>
           </div>
         </FadeInOnView>
       </div>

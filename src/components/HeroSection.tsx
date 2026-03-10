@@ -50,9 +50,15 @@ export function HeroSection() {
           </span>
         </p>
         <div className="hero-actions hero-entry">
-          <CTAButton href="#contact">Book a Discovery Call</CTAButton>
+          <CTAButton
+            href="https://calendly.com/meliorsolutions-info/30min"
+            glow
+            newTab
+          >
+            Book a Discovery Call
+          </CTAButton>
           <CTAButton href="#what-we-do" secondary>
-            See What We Do
+            See Our Work
           </CTAButton>
         </div>
       </div>

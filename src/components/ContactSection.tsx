@@ -61,7 +61,7 @@ export function ContactSection() {
             </div>
           </FadeInOnView>
           <FadeInOnView>
-            <div className="calendly-wrap">
+            <div className="calendly-wrap" id="calendly">
               <iframe
                 src="https://calendly.com/meliorsolutions-info/30min"
                 title="Book a Discovery Call"

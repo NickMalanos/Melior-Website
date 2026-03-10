@@ -555,6 +555,69 @@ p {
 
 /* ─── Buttons ─── */
 
+.button-glow-wrap {
+  display: inline-block;
+  position: relative;
+  padding: 1.5px;
+  border-radius: 13.5px;
+  overflow: hidden;
+}
+
+.button-glow-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 228deg,
+    rgba(255, 255, 255, 0.12) 248deg,
+    rgba(255, 255, 255, 0.88) 268deg,
+    rgba(255, 255, 255, 0.88) 328deg,
+    rgba(255, 255, 255, 0.12) 348deg,
+    transparent 360deg
+  );
+  animation: buttonGlowSpin 5.5s linear infinite;
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 42%, black 42%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 42%, black 42%, black 100%);
+  mask-size: 100% 100%;
+  mask-position: 0 0;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-position: 0 0;
+}
+
+.button-glow-wrap--navy::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 228deg,
+    rgba(60, 95, 140, 0.2) 248deg,
+    rgba(60, 95, 140, 0.78) 268deg,
+    rgba(60, 95, 140, 0.78) 328deg,
+    rgba(60, 95, 140, 0.2) 348deg,
+    transparent 360deg
+  );
+}
+
+.button-glow-wrap .button {
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+@keyframes buttonGlowSpin {
+  0%   { transform: rotate(0deg); }
+  17%  { transform: rotate(90deg); }
+  82%  { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-glow-wrap::before {
+    animation: none;
+  }
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -809,6 +872,7 @@ p {
   min-height: 580px;
   border-radius: var(--radius);
   overflow: hidden;
+  scroll-margin-top: 92px;
 }
 
 .calendly-wrap iframe {
